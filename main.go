@@ -19,15 +19,6 @@ var cli struct {
 	SetPath       string `help:"Optionally override path (via restic --set-path)"`
 }
 
-// This converts a borg repository with its contents to restic.
-// It needs the following:
-
-// $BORG_REPO set to the old borg repository
-// $BORG_PASSPHRASE set to the borg passphrase
-// $RESTIC_REPOSITORY set to the restic repository
-// $RESTIC_PASSWORD set to the restic password
-// It assumes the version of restic in path has the --set-path patch applied (https://github.com/restic/restic/pull/3200)
-
 func main() {
 	_ = kong.Parse(&cli,
 		kong.Name("borg2restic"),
