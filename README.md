@@ -14,7 +14,7 @@ It will mount the borg repository, collect a list of all snapshots, and will
 invoke restic to "back up from the mountpoint".
 
 It does this by changing the working directory of the restic process to the
-location of the mounted borg contents (and an optional supath in there).
+location of the mounted borg contents (and an optional subpath in there).
 
 Additionally, the path shown in `restic snapshots` can be overridden, so it
 doesn't show artifacts from the conversion.
